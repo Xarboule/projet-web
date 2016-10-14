@@ -3,8 +3,8 @@
 {% block main %}
     <h1>Nos circuits</h1>
 
-    <table>
-        <thead>
+    <table cellspacing="100" cellpadding="100">
+        <thead align="center" style="margin: 0px auto;">
             <tr>
                 <th>Id</th>
                 <th>Description</th>
@@ -23,7 +23,7 @@
                 <td>{{ circuit.paysDepart }}</td>
                 <td>{{ circuit.villeDepart }}</td>
                 <td>{{ circuit.villeArrivee }}</td>
-                <td>{{ circuit.dureeCircuit }}</td>
+                <td align="center" style="margin: 0px auto;">{{ circuit.dureeCircuit }}</td>
                 <td>
                     <ul>
                         <li>
