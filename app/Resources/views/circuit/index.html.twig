@@ -13,6 +13,11 @@
                 <th>Ville arrivee</th>
                 <th>Duree circuit</th>
                 <th>Actions</th>
+                {% if is_granted('ROLE_USER') %}
+                    <th>Suppression</th>
+                    <th>Modification</th>
+                {% endif %}
+
             </tr>
         </thead>
         <tbody>
@@ -28,12 +33,39 @@
                     <ul>
                         <li>
                             <a href="{{ path('circuit_show', { 'id': circuit.id }) }}">détails</a>
+
                         </li>
                     </ul>
                 </td>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('circuit_show', { 'id': circuit.id }) }}">Supprimer</a>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('circuit_show', { 'id': circuit.id }) }}">Modifier</a>
+                        </li>
+                    </ul>
+                </td>
+
+                {% endif %}
+
+
             </tr>
         {% endfor %}
+
         </tbody>
     </table>
+
+    {% if is_granted('ROLE_ADMIN') %}
+        <br/><br/>
+
+
+    {% endif %}
     
 {% endblock %} {# main #}

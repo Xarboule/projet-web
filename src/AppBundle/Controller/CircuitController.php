@@ -42,6 +42,41 @@ class CircuitController extends Controller
         return $this->render('circuit/show.html.twig', array(
             'circuit' => $circuit,
         ));
+
     }
 
+    public function addCircuit()
+    {
+
+        $circuit = new Circuit();
+        $circuit->setPaysDepart("TOMBOUCTOU");
+        $circuit->setDescription("C'EST SUPER GENIAAAAAAL");
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($circuit);
+        $em->flush();
+
+    }
+
+    public function newAction(Request $request)
+    {
+        $circuit = new Circuit();
+
+        $formBuilder = $this->get('form.factory')->createBuilder('form', $circuit);
+
+        $formBuilder
+            ->add('',      'date')
+            ->add('title',     'text')
+            ->add('content',   'textarea')
+            ->add('author',    'text')
+            ->add('published', 'checkbox')
+            ->add('save',      'submit')
+        ;
+
+        $form = $formBuilder->getForm();
+
+        return $this->render('OCPlatformBundle:Advert:add.html.twig', array(
+            'form' => $form->createView(),
+        ));
+    }
 }
