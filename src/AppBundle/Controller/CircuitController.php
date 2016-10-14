@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use AppBundle\Entity\Circuit;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -28,7 +29,7 @@ class CircuitController extends Controller
 
         $circuits = $em->getRepository('AppBundle:Circuit')->findAll();
 
-        return $this->render('circuit/add.html.twig', array(
+        return $this->render('circuit/index.html.twig', array(
             'circuits' => $circuits,
         ));
     }
@@ -49,49 +50,5 @@ class CircuitController extends Controller
 
     }
 
-    /**
-     * Finds and displays a Circuit entity.
-     *
-     * @Route("/circuit/add", name="circuit_show")
-     * @Method("GET")
-     */
-    public function addAction()
-    {
-        return $this->render('circuit/add.html.twig');
 
-    }
-
-    public function addCircuit()
-    {
-
-        $circuit = new Circuit();
-        $circuit->setPaysDepart("TOMBOUCTOU");
-        $circuit->setDescription("C'EST SUPER GENIAAAAAAL");
-
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($circuit);
-        $em->flush();
-
-    }
-
-    public function newAction(Request $request)
-    {
-        $circuit = new Circuit();
-
-        $formBuilder = $this->createFormBuilder($circuit);
-
-        $formBuilder
-            ->add('Description', 'text')
-            ->add('Pays Départ',  'text')
-            ->add('Ville Départ', 'text')
-            ->add('Ville Arrivée', 'text')
-            ->add('Durée Circuit', 'text')
-        ;
-
-        $form = $formBuilder->getForm();
-
-        return $this->render('circuit/add.html.twig', array(
-            'form' => $form->createView(),
-        ));
-    }
 }
