@@ -25,7 +25,6 @@ class AddController extends CircuitController
      * Finds and displays a Circuit entity.
      *
      * @Route("/circuit/add", name="circuit_add")
-     * @Method("GET")
      */
     public function addAction(Request $request)
     {

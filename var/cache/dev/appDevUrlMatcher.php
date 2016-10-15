@@ -103,14 +103,8 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         if (0 === strpos($pathinfo, '/circuit')) {
             // circuit_add
             if ($pathinfo === '/circuit/add') {
-                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'HEAD'));
-                    goto not_circuit_add;
-                }
-
                 return array (  '_controller' => 'AppBundle\\Controller\\AddController::addAction',  '_route' => 'circuit_add',);
             }
-            not_circuit_add:
 
             // circuit_index
             if (rtrim($pathinfo, '/') === '/circuit') {
