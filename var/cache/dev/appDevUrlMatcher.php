@@ -101,30 +101,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         if (0 === strpos($pathinfo, '/circuit')) {
-            if (0 === strpos($pathinfo, '/circuit/add')) {
-                // circuit_add
-                if ($pathinfo === '/circuit/add') {
-                    if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                        $allow = array_merge($allow, array('GET', 'HEAD'));
-                        goto not_circuit_add;
-                    }
-
-                    return array (  '_controller' => 'AppBundle\\Controller\\AddController::addAction',  '_route' => 'circuit_add',);
+            // circuit_add
+            if ($pathinfo === '/circuit/add') {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_circuit_add;
                 }
-                not_circuit_add:
 
-                // circuit_post
-                if ($pathinfo === '/circuit/add') {
-                    if ($this->context->getMethod() != 'POST') {
-                        $allow[] = 'POST';
-                        goto not_circuit_post;
-                    }
-
-                    return array (  '_controller' => 'AppBundle\\Controller\\AddController::addCircuit',  '_route' => 'circuit_post',);
-                }
-                not_circuit_post:
-
+                return array (  '_controller' => 'AppBundle\\Controller\\AddController::addAction',  '_route' => 'circuit_add',);
             }
+            not_circuit_add:
 
             // circuit_index
             if (rtrim($pathinfo, '/') === '/circuit') {
