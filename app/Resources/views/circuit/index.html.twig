@@ -41,14 +41,14 @@
                     <td>
                         <ul>
                             <li>
-                                <a href="{{ path('circuit_show', { 'id': circuit.id }) }}">Supprimer</a>
+                                <a href="{{ path('circuit_remove', { 'id': circuit.id }) }}">Supprimer</a>
                             </li>
                         </ul>
                     </td>
                     <td>
                     <ul>
                         <li>
-                            <a href="{{ path('circuit_show', { 'id': circuit.id }) }}">Modifier</a>
+                            <a href="{{ path('circuit_modify', { 'id': circuit.id }) }}">Modifier</a>
                         </li>
                     </ul>
                 </td>
@@ -62,7 +62,7 @@
         </tbody>
     </table>
 
-    {% if is_granted('ROLE_ADMIN') %}
+    {% if is_granted('ROLE_COLLAB') %}
         <br/><br/>
 
         <a href="{{ path('circuit_add') }}">Ajouter un voyage</a>

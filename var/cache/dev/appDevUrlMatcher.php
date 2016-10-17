@@ -100,38 +100,9 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        if (0 === strpos($pathinfo, '/circuit')) {
-            // circuit_add
-            if ($pathinfo === '/circuit/add') {
-                return array (  '_controller' => 'AppBundle\\Controller\\AddController::addAction',  '_route' => 'circuit_add',);
-            }
-
-            // circuit_index
-            if (rtrim($pathinfo, '/') === '/circuit') {
-                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'HEAD'));
-                    goto not_circuit_index;
-                }
-
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'circuit_index');
-                }
-
-                return array (  '_controller' => 'AppBundle\\Controller\\CircuitController::indexAction',  '_route' => 'circuit_index',);
-            }
-            not_circuit_index:
-
-            // circuit_show
-            if (preg_match('#^/circuit/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'HEAD'));
-                    goto not_circuit_show;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'circuit_show')), array (  '_controller' => 'AppBundle\\Controller\\CircuitController::showAction',));
-            }
-            not_circuit_show:
-
+        // circuit_add
+        if ($pathinfo === '/circuit/add') {
+            return array (  '_controller' => 'AppBundle\\Controller\\AddController::addAction',  '_route' => 'circuit_add',);
         }
 
         // homepage
@@ -148,6 +119,51 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\HomepageController::homepageAction',  '_route' => 'homepage',);
         }
         not_homepage:
+
+        if (0 === strpos($pathinfo, '/circuit')) {
+            // circuit_modify
+            if (0 === strpos($pathinfo, '/circuit/modify') && preg_match('#^/circuit/modify/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'circuit_modify')), array (  '_controller' => 'AppBundle\\Controller\\ModifyController::modifyAction',));
+            }
+
+            // circuit_remove
+            if (0 === strpos($pathinfo, '/circuit/remove') && preg_match('#^/circuit/remove/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_circuit_remove;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'circuit_remove')), array (  '_controller' => 'AppBundle\\Controller\\ModifyController::removeCircuit',));
+            }
+            not_circuit_remove:
+
+            // circuit_index
+            if (rtrim($pathinfo, '/') === '/circuit') {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_circuit_index;
+                }
+
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'circuit_index');
+                }
+
+                return array (  '_controller' => 'AppBundle\\Controller\\ModifyController::indexAction',  '_route' => 'circuit_index',);
+            }
+            not_circuit_index:
+
+            // circuit_show
+            if (preg_match('#^/circuit/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_circuit_show;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'circuit_show')), array (  '_controller' => 'AppBundle\\Controller\\ModifyController::showAction',));
+            }
+            not_circuit_show:
+
+        }
 
         if (0 === strpos($pathinfo, '/log')) {
             if (0 === strpos($pathinfo, '/login')) {

@@ -28,6 +28,10 @@ class AddController extends CircuitController
      */
     public function addAction(Request $request)
     {
+        if (!$this->get('security.authorization_checker')->isGranted('ROLE_COLLAB')) {
+            throw $this->createAccessDeniedException();
+        }
+
         $circuit = new Circuit();
 
         $formBuilder = $this->createFormBuilder($circuit);
