@@ -28,7 +28,7 @@ class AddController extends CircuitController
      */
     public function addAction(Request $request)
     {
-        if (!$this->get('security.authorization_checker')->isGranted('ROLE_COLLAB')) {
+        if (!$this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
             throw $this->createAccessDeniedException();
         }
 
