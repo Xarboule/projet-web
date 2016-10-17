@@ -23,20 +23,20 @@ class __TwigTemplate_6faf108a4535e66ea4b080d5d5e6a0cdeee791b1e19c304ebf627b732ad
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_90c4d640111b92063dd3063a32b9453fbbacf564ebdf3324d0bac2a5ed0de00c = $this->env->getExtension("native_profiler");
-        $__internal_90c4d640111b92063dd3063a32b9453fbbacf564ebdf3324d0bac2a5ed0de00c->enter($__internal_90c4d640111b92063dd3063a32b9453fbbacf564ebdf3324d0bac2a5ed0de00c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "agvoybase.html.twig"));
+        $__internal_193d992eca72bcc2b4cf1a9658d19cb63114af31eae820fba1262fe8fa2c6738 = $this->env->getExtension("native_profiler");
+        $__internal_193d992eca72bcc2b4cf1a9658d19cb63114af31eae820fba1262fe8fa2c6738->enter($__internal_193d992eca72bcc2b4cf1a9658d19cb63114af31eae820fba1262fe8fa2c6738_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "agvoybase.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_90c4d640111b92063dd3063a32b9453fbbacf564ebdf3324d0bac2a5ed0de00c->leave($__internal_90c4d640111b92063dd3063a32b9453fbbacf564ebdf3324d0bac2a5ed0de00c_prof);
+        $__internal_193d992eca72bcc2b4cf1a9658d19cb63114af31eae820fba1262fe8fa2c6738->leave($__internal_193d992eca72bcc2b4cf1a9658d19cb63114af31eae820fba1262fe8fa2c6738_prof);
 
     }
 
     // line 3
     public function block_header($context, array $blocks = array())
     {
-        $__internal_73ef678a96fbf22ad04f09d8724fde2bdd57e492a1b7b62696db4858b5f2d90e = $this->env->getExtension("native_profiler");
-        $__internal_73ef678a96fbf22ad04f09d8724fde2bdd57e492a1b7b62696db4858b5f2d90e->enter($__internal_73ef678a96fbf22ad04f09d8724fde2bdd57e492a1b7b62696db4858b5f2d90e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
+        $__internal_197c1797f2613ec7ce62c332f54719d0e16db0f09a3cf64f7b8033970ff68304 = $this->env->getExtension("native_profiler");
+        $__internal_197c1797f2613ec7ce62c332f54719d0e16db0f09a3cf64f7b8033970ff68304->enter($__internal_197c1797f2613ec7ce62c332f54719d0e16db0f09a3cf64f7b8033970ff68304_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
 
         // line 4
         echo "            <header>
@@ -49,6 +49,7 @@ class __TwigTemplate_6faf108a4535e66ea4b080d5d5e6a0cdeee791b1e19c304ebf627b732ad
         echo "\">
                                 Accueil
                             </a>
+
 
                             <button type=\"button\" class=\"navbar-toggle\"
                                     data-toggle=\"collapse\"
@@ -63,9 +64,9 @@ class __TwigTemplate_6faf108a4535e66ea4b080d5d5e6a0cdeee791b1e19c304ebf627b732ad
                             <ul class=\"nav navbar-nav\">
 
                                 ";
-        // line 24
+        // line 25
         $this->displayBlock('header_navigation_links', $context, $blocks);
-        // line 35
+        // line 48
         echo "
                             </ul>
                         </div>
@@ -74,43 +75,68 @@ class __TwigTemplate_6faf108a4535e66ea4b080d5d5e6a0cdeee791b1e19c304ebf627b732ad
             </header>
 ";
         
-        $__internal_73ef678a96fbf22ad04f09d8724fde2bdd57e492a1b7b62696db4858b5f2d90e->leave($__internal_73ef678a96fbf22ad04f09d8724fde2bdd57e492a1b7b62696db4858b5f2d90e_prof);
+        $__internal_197c1797f2613ec7ce62c332f54719d0e16db0f09a3cf64f7b8033970ff68304->leave($__internal_197c1797f2613ec7ce62c332f54719d0e16db0f09a3cf64f7b8033970ff68304_prof);
 
     }
 
-    // line 24
+    // line 25
     public function block_header_navigation_links($context, array $blocks = array())
     {
-        $__internal_209ddd023955629986506228804ab61570495e3b9774c3173bc0a5634f8df804 = $this->env->getExtension("native_profiler");
-        $__internal_209ddd023955629986506228804ab61570495e3b9774c3173bc0a5634f8df804->enter($__internal_209ddd023955629986506228804ab61570495e3b9774c3173bc0a5634f8df804_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header_navigation_links"));
+        $__internal_768cf71528cb2be0a1da091e1da3872985672558a9c787be194f0425ec4b8cb4 = $this->env->getExtension("native_profiler");
+        $__internal_768cf71528cb2be0a1da091e1da3872985672558a9c787be194f0425ec4b8cb4->enter($__internal_768cf71528cb2be0a1da091e1da3872985672558a9c787be194f0425ec4b8cb4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header_navigation_links"));
 
-        // line 25
+        // line 26
         echo "                                    <li>
                                         <a href=\"";
-        // line 26
+        // line 27
         echo $this->env->getExtension('routing')->getPath("circuit_index");
         echo "\">Voyages</a>
                                     </li>
+                                    <li>
+                                    ";
+        // line 30
+        if ($this->env->getExtension('security')->isGranted("ROLE_ADMIN")) {
+            // line 31
+            echo "                                        <a href=\"";
+            echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
+            echo "\">
+                                            Logout
+                                        </a>
+                                    ";
+        } else {
+            // line 35
+            echo "                                        <a href=\"";
+            echo $this->env->getExtension('routing')->getPath("fos_user_security_login");
+            echo "\">
+                                        Login
+                                        </a>
+                                    ";
+        }
+        // line 39
+        echo "
+                                    </li>
                                 ";
-        // line 34
+        // line 47
         echo "                                ";
         
-        $__internal_209ddd023955629986506228804ab61570495e3b9774c3173bc0a5634f8df804->leave($__internal_209ddd023955629986506228804ab61570495e3b9774c3173bc0a5634f8df804_prof);
+        $__internal_768cf71528cb2be0a1da091e1da3872985672558a9c787be194f0425ec4b8cb4->leave($__internal_768cf71528cb2be0a1da091e1da3872985672558a9c787be194f0425ec4b8cb4_prof);
 
     }
 
-    // line 43
+    // line 56
     public function block_sidebar($context, array $blocks = array())
     {
-        $__internal_0cdfde50b9623389456eb33bbd3fe84f08a49edce3d425a8d53a068d95b0c7eb = $this->env->getExtension("native_profiler");
-        $__internal_0cdfde50b9623389456eb33bbd3fe84f08a49edce3d425a8d53a068d95b0c7eb->enter($__internal_0cdfde50b9623389456eb33bbd3fe84f08a49edce3d425a8d53a068d95b0c7eb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
+        $__internal_208dd64653aa1082b05f5a8671fd325142ceb097e04c058afcf0be61debf50eb = $this->env->getExtension("native_profiler");
+        $__internal_208dd64653aa1082b05f5a8671fd325142ceb097e04c058afcf0be61debf50eb->enter($__internal_208dd64653aa1082b05f5a8671fd325142ceb097e04c058afcf0be61debf50eb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
 
-        // line 44
-        echo "\t<h4>About</h4>
-\t<p>Bienvenue sur notre agence virtuelle.</p>
+        // line 57
+        echo "\t<h4>Tux Voyages</h4>
+\t<p>Avec Tux voyages, faites un \"mv ~/tousMesProblemes /dev/null\", et voyagez avec l'esprit tranquille !</p>
+    <img src=\"http://www.gifsanimes.fr/images/t/tux/tux-gifs-animes-7900876.gif\" style=\"width: 50%; height: 50%\" >
+
 ";
         
-        $__internal_0cdfde50b9623389456eb33bbd3fe84f08a49edce3d425a8d53a068d95b0c7eb->leave($__internal_0cdfde50b9623389456eb33bbd3fe84f08a49edce3d425a8d53a068d95b0c7eb_prof);
+        $__internal_208dd64653aa1082b05f5a8671fd325142ceb097e04c058afcf0be61debf50eb->leave($__internal_208dd64653aa1082b05f5a8671fd325142ceb097e04c058afcf0be61debf50eb_prof);
 
     }
 
@@ -126,7 +152,7 @@ class __TwigTemplate_6faf108a4535e66ea4b080d5d5e6a0cdeee791b1e19c304ebf627b732ad
 
     public function getDebugInfo()
     {
-        return array (  109 => 44,  103 => 43,  96 => 34,  91 => 26,  88 => 25,  82 => 24,  69 => 35,  67 => 24,  48 => 8,  42 => 4,  36 => 3,  11 => 1,);
+        return array (  133 => 57,  127 => 56,  120 => 47,  116 => 39,  108 => 35,  100 => 31,  98 => 30,  92 => 27,  89 => 26,  83 => 25,  70 => 48,  68 => 25,  48 => 8,  42 => 4,  36 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -139,6 +165,7 @@ class __TwigTemplate_6faf108a4535e66ea4b080d5d5e6a0cdeee791b1e19c304ebf627b732ad
 /*                             <a class="navbar-brand" href="{{ path('homepage') }}">*/
 /*                                 Accueil*/
 /*                             </a>*/
+/* */
 /* */
 /*                             <button type="button" class="navbar-toggle"*/
 /*                                     data-toggle="collapse"*/
@@ -156,6 +183,18 @@ class __TwigTemplate_6faf108a4535e66ea4b080d5d5e6a0cdeee791b1e19c304ebf627b732ad
 /*                                     <li>*/
 /*                                         <a href="{{ path('circuit_index') }}">Voyages</a>*/
 /*                                     </li>*/
+/*                                     <li>*/
+/*                                     {% if is_granted('ROLE_ADMIN') %}*/
+/*                                         <a href="{{ path('fos_user_security_logout') }}">*/
+/*                                             Logout*/
+/*                                         </a>*/
+/*                                     {% else %}*/
+/*                                         <a href="{{ path('fos_user_security_login') }}">*/
+/*                                         Login*/
+/*                                         </a>*/
+/*                                     {% endif %}*/
+/* */
+/*                                     </li>*/
 /*                                 {# {% if is_granted('ROLE_ADMIN') %}*/
 /*                                     <li>*/
 /*            								<a href="{{ path('admin_post_new') }}">Nouveau post</a>                         */
@@ -172,6 +211,8 @@ class __TwigTemplate_6faf108a4535e66ea4b080d5d5e6a0cdeee791b1e19c304ebf627b732ad
 /* {% endblock %}*/
 /*         */
 /* {% block sidebar %}*/
-/* 	<h4>About</h4>*/
-/* 	<p>Bienvenue sur notre agence virtuelle.</p>*/
+/* 	<h4>Tux Voyages</h4>*/
+/* 	<p>Avec Tux voyages, faites un "mv ~/tousMesProblemes /dev/null", et voyagez avec l'esprit tranquille !</p>*/
+/*     <img src="http://www.gifsanimes.fr/images/t/tux/tux-gifs-animes-7900876.gif" style="width: 50%; height: 50%" >*/
+/* */
 /* {% endblock %}*/

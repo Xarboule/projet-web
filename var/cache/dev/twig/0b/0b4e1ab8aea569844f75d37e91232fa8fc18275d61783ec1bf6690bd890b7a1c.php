@@ -1,6 +1,6 @@
 <?php
 
-/* :homepage:homepage.html.twig */
+/* homepage/homepage.html.twig */
 class __TwigTemplate_81e72a0b81c8a67e4eca3ef8a51aaafdeb661f2010c3c569ddf2dc7399e6c70e extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_81e72a0b81c8a67e4eca3ef8a51aaafdeb661f2010c3c569ddf2dc7399e
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("agvoybase.html.twig", ":homepage:homepage.html.twig", 1);
+        $this->parent = $this->loadTemplate("agvoybase.html.twig", "homepage/homepage.html.twig", 1);
         $this->blocks = array(
             'main' => array($this, 'block_main'),
         );
@@ -21,36 +21,36 @@ class __TwigTemplate_81e72a0b81c8a67e4eca3ef8a51aaafdeb661f2010c3c569ddf2dc7399e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2c5d249401bddd4a11b0460c6abdda4a4662d6989eaa9bd841d5e9a3c6e34cc0 = $this->env->getExtension("native_profiler");
-        $__internal_2c5d249401bddd4a11b0460c6abdda4a4662d6989eaa9bd841d5e9a3c6e34cc0->enter($__internal_2c5d249401bddd4a11b0460c6abdda4a4662d6989eaa9bd841d5e9a3c6e34cc0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":homepage:homepage.html.twig"));
+        $__internal_91c1ba5f73ebdc23aa3120023d5dd0d970b5413583facfe873ca2bd9e7b1dffd = $this->env->getExtension("native_profiler");
+        $__internal_91c1ba5f73ebdc23aa3120023d5dd0d970b5413583facfe873ca2bd9e7b1dffd->enter($__internal_91c1ba5f73ebdc23aa3120023d5dd0d970b5413583facfe873ca2bd9e7b1dffd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "homepage/homepage.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_2c5d249401bddd4a11b0460c6abdda4a4662d6989eaa9bd841d5e9a3c6e34cc0->leave($__internal_2c5d249401bddd4a11b0460c6abdda4a4662d6989eaa9bd841d5e9a3c6e34cc0_prof);
+        $__internal_91c1ba5f73ebdc23aa3120023d5dd0d970b5413583facfe873ca2bd9e7b1dffd->leave($__internal_91c1ba5f73ebdc23aa3120023d5dd0d970b5413583facfe873ca2bd9e7b1dffd_prof);
 
     }
 
     // line 3
     public function block_main($context, array $blocks = array())
     {
-        $__internal_d52ecefe1ca2e694432abed6f34c6458dce51f4035dac8aae712fb4944fd8c97 = $this->env->getExtension("native_profiler");
-        $__internal_d52ecefe1ca2e694432abed6f34c6458dce51f4035dac8aae712fb4944fd8c97->enter($__internal_d52ecefe1ca2e694432abed6f34c6458dce51f4035dac8aae712fb4944fd8c97_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "main"));
+        $__internal_d5f18f55894ba3e747d1a2ebe4a4d6a34aa6325954be90aea6c468fbf1f847cc = $this->env->getExtension("native_profiler");
+        $__internal_d5f18f55894ba3e747d1a2ebe4a4d6a34aa6325954be90aea6c468fbf1f847cc->enter($__internal_d5f18f55894ba3e747d1a2ebe4a4d6a34aa6325954be90aea6c468fbf1f847cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "main"));
 
         // line 4
         echo "
 
     <h1>Bienvenue sur INT Holidays !</h1>
     
-    <img src=\"http://66.media.tumblr.com/tumblr_l7ceutBSpU1qb4gnro1_1280.jpg\" style=\"width: 50%; height: 50%\" >
+    <img src=\"http://4everstatic.com/pictures/674xX/cartoons/digital-art/tux,-cartoon-penguin,-linux,-beach-124355.jpg\" style=\"width: 50%; height: 50%\" >
 ";
         
-        $__internal_d52ecefe1ca2e694432abed6f34c6458dce51f4035dac8aae712fb4944fd8c97->leave($__internal_d52ecefe1ca2e694432abed6f34c6458dce51f4035dac8aae712fb4944fd8c97_prof);
+        $__internal_d5f18f55894ba3e747d1a2ebe4a4d6a34aa6325954be90aea6c468fbf1f847cc->leave($__internal_d5f18f55894ba3e747d1a2ebe4a4d6a34aa6325954be90aea6c468fbf1f847cc_prof);
 
     }
 
     public function getTemplateName()
     {
-        return ":homepage:homepage.html.twig";
+        return "homepage/homepage.html.twig";
     }
 
     public function isTraitable()
@@ -70,5 +70,5 @@ class __TwigTemplate_81e72a0b81c8a67e4eca3ef8a51aaafdeb661f2010c3c569ddf2dc7399e
 /* */
 /*     <h1>Bienvenue sur INT Holidays !</h1>*/
 /*     */
-/*     <img src="http://66.media.tumblr.com/tumblr_l7ceutBSpU1qb4gnro1_1280.jpg" style="width: 50%; height: 50%" >*/
+/*     <img src="http://4everstatic.com/pictures/674xX/cartoons/digital-art/tux,-cartoon-penguin,-linux,-beach-124355.jpg" style="width: 50%; height: 50%" >*/
 /* {% endblock %} {# main #}*/
