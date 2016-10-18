@@ -275,6 +275,7 @@ class Circuit
      * @param \AppBundle\Entity\Etape $etape
      *
      * @return Circuit
+     *
      */
     public function addEtape(\AppBundle\Entity\Etape $etape)
     {
@@ -298,6 +299,7 @@ class Circuit
      * @param \AppBundle\Entity\Etape $etape
      * 
      * @return Circuit
+     *
      */
     public function removeEtape(\AppBundle\Entity\Etape $etape)
     {

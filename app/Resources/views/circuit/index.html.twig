@@ -14,7 +14,6 @@
                 <th>Duree circuit</th>
                 <th>Actions</th>
                 {% if is_granted('ROLE_USER') %}
-                    <th>Suppression</th>
                     <th>Modification</th>
                 {% endif %}
 
@@ -37,14 +36,8 @@
                         </li>
                     </ul>
                 </td>
-                {% if is_granted('ROLE_ADMIN') %}
-                    <td>
-                        <ul>
-                            <li>
-                                <a href="{{ path('circuit_remove', { 'id': circuit.id }) }}">Supprimer</a>
-                            </li>
-                        </ul>
-                    </td>
+                {% if is_granted('ROLE_USER') %}
+
                     <td>
                     <ul>
                         <li>
@@ -62,7 +55,7 @@
         </tbody>
     </table>
 
-    {% if is_granted('ROLE_ADMIN') %}
+    {% if is_granted('ROLE_USER') %}
         <br/><br/>
 
         <a href="{{ path('circuit_add') }}">Ajouter un voyage</a>

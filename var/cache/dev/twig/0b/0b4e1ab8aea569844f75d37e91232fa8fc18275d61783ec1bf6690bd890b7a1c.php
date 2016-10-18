@@ -21,20 +21,20 @@ class __TwigTemplate_81e72a0b81c8a67e4eca3ef8a51aaafdeb661f2010c3c569ddf2dc7399e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_fe12307a04dd4ab08df9dd4c3e0e061279205c80ca4a84cb3b6234007038a623 = $this->env->getExtension("native_profiler");
-        $__internal_fe12307a04dd4ab08df9dd4c3e0e061279205c80ca4a84cb3b6234007038a623->enter($__internal_fe12307a04dd4ab08df9dd4c3e0e061279205c80ca4a84cb3b6234007038a623_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "homepage/homepage.html.twig"));
+        $__internal_0caa9b0c71e6776cc5eae4763e4e59570e15135da481f281366d623bdf5ac56b = $this->env->getExtension("native_profiler");
+        $__internal_0caa9b0c71e6776cc5eae4763e4e59570e15135da481f281366d623bdf5ac56b->enter($__internal_0caa9b0c71e6776cc5eae4763e4e59570e15135da481f281366d623bdf5ac56b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "homepage/homepage.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_fe12307a04dd4ab08df9dd4c3e0e061279205c80ca4a84cb3b6234007038a623->leave($__internal_fe12307a04dd4ab08df9dd4c3e0e061279205c80ca4a84cb3b6234007038a623_prof);
+        $__internal_0caa9b0c71e6776cc5eae4763e4e59570e15135da481f281366d623bdf5ac56b->leave($__internal_0caa9b0c71e6776cc5eae4763e4e59570e15135da481f281366d623bdf5ac56b_prof);
 
     }
 
     // line 3
     public function block_main($context, array $blocks = array())
     {
-        $__internal_2f83efb94be45618349162221a0051cc4c24e0f2f5d751a0da407545c99cf42c = $this->env->getExtension("native_profiler");
-        $__internal_2f83efb94be45618349162221a0051cc4c24e0f2f5d751a0da407545c99cf42c->enter($__internal_2f83efb94be45618349162221a0051cc4c24e0f2f5d751a0da407545c99cf42c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "main"));
+        $__internal_e8f0fae2e50822fff948615ef832c0105601128628aa68e960990bcc8a278fd4 = $this->env->getExtension("native_profiler");
+        $__internal_e8f0fae2e50822fff948615ef832c0105601128628aa68e960990bcc8a278fd4->enter($__internal_e8f0fae2e50822fff948615ef832c0105601128628aa68e960990bcc8a278fd4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "main"));
 
         // line 4
         echo "
@@ -44,7 +44,7 @@ class __TwigTemplate_81e72a0b81c8a67e4eca3ef8a51aaafdeb661f2010c3c569ddf2dc7399e
     <img src=\"http://4everstatic.com/pictures/674xX/cartoons/digital-art/tux,-cartoon-penguin,-linux,-beach-124355.jpg\" style=\"width: 50%; height: 50%\" >
 ";
         
-        $__internal_2f83efb94be45618349162221a0051cc4c24e0f2f5d751a0da407545c99cf42c->leave($__internal_2f83efb94be45618349162221a0051cc4c24e0f2f5d751a0da407545c99cf42c_prof);
+        $__internal_e8f0fae2e50822fff948615ef832c0105601128628aa68e960990bcc8a278fd4->leave($__internal_e8f0fae2e50822fff948615ef832c0105601128628aa68e960990bcc8a278fd4_prof);
 
     }
 

@@ -144,6 +144,7 @@
   ':homepage:homepage.html.twig' => '/home/xarboule/Info/web/agvoy/app/Resources/views/homepage/homepage.html.twig',
   ':circuit:index.html.twig' => '/home/xarboule/Info/web/agvoy/app/Resources/views/circuit/index.html.twig',
   ':circuit:show.html.twig' => '/home/xarboule/Info/web/agvoy/app/Resources/views/circuit/show.html.twig',
+  ':circuit:addStep.html.twig' => '/home/xarboule/Info/web/agvoy/app/Resources/views/circuit/addStep.html.twig',
   ':circuit:modify.html.twig' => '/home/xarboule/Info/web/agvoy/app/Resources/views/circuit/modify.html.twig',
   ':circuit:add.html.twig' => '/home/xarboule/Info/web/agvoy/app/Resources/views/circuit/add.html.twig',
   ':default:index.html.twig' => '/home/xarboule/Info/web/agvoy/app/Resources/views/default/index.html.twig',

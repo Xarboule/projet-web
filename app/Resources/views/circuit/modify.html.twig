@@ -8,4 +8,35 @@
     {{ form_widget(form) }}
     {{ form_end(form) }}
 
+    </br></br>
+
+    <h3>Étapes</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Numéro</th>
+            <th>Ville</th>
+            <th>Nombre jours</th>
+            <th>Suppression</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for etape in circuit.etapes %}
+            <tr>
+                <td>{{ etape.numeroEtape }}</td>
+                <td>{{ etape.villeEtape }}</td>
+                <td>{{ etape.nombreJours }} j.</td>
+                <td><a href=""{{ path('step_remove', {'id' : circuit.id, 'idStep' : etape.id}) }}>Supprimer</a></td>
+            </tr>
+        {% endfor %} {# circuit.etapes #}
+        </tbody>
+    </table>
+
+    <a href="{{ path('step_add', {'id' : circuit.id }) }}">Ajouter une étape</a>
+
+    </br></br>
+
+    <a href="{{ path('circuit_remove', { 'id': circuit.id }) }}">Supprimer ce voyage</a>
+
 {% endblock %} {# main #}

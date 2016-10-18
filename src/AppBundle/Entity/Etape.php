@@ -52,7 +52,7 @@ class Etape
     private $nombreJours;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Circuit", inversedBy="etapes")
+     * @ORM\ManyToOne(targetEntity="Circuit", inversedBy="etapes", cascade={"persist"}))
      * (Doctrine OWNING SIDE)
      * @ORM\JoinColumn(name="circuit_id", referencedColumnName="id")
      */

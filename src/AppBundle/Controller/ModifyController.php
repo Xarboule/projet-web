@@ -21,6 +21,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class ModifyController extends CircuitController
 {
+
     /**
      * Finds and displays a Circuit entity.
      *
@@ -72,7 +73,7 @@ class ModifyController extends CircuitController
         }
 
         return $this->render('circuit/modify.html.twig', array(
-            'form' => $form->createView()));
+            'form' => $form->createView(), 'circuit' => $circuit));
     }
 
     /**
@@ -85,7 +86,7 @@ class ModifyController extends CircuitController
     public function removeCircuit($id)
     {
 
-        if (!$this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
+        if (!$this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
             throw $this->createAccessDeniedException();
         }
 
@@ -98,6 +99,24 @@ class ModifyController extends CircuitController
         return $this->redirect($this->generateUrl('circuit_index'));
 
 
+    }
+
+    /**
+     * Finds and displays a Circuit entity.
+     *
+     * @Route("/circuit/removestep/{id}/{idStep}", name="step_remove", requirements={
+     *              "idStep" : "\d+"})
+     * @Method("GET")
+     */
+    public function removeStep(Circuit $circuit, Etape $etape){
+
+        $circuit->removeEtape($etape);
+
+        $em = $this->getDoctrine()->getEntityManager();
+        $em->persist($etape, $circuit);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl('circuit_modify'));
     }
 
 }

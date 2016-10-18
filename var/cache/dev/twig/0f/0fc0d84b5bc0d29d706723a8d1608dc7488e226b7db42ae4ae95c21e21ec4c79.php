@@ -21,20 +21,20 @@ class __TwigTemplate_d33a12fb7500565dcd23fd4739f2f3ac6b7470f63c61b75fe5c66c060df
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0eb28ff4fbe915c7726f4183133fe105d30603e1c97c225517b4ce1a95bde4b8 = $this->env->getExtension("native_profiler");
-        $__internal_0eb28ff4fbe915c7726f4183133fe105d30603e1c97c225517b4ce1a95bde4b8->enter($__internal_0eb28ff4fbe915c7726f4183133fe105d30603e1c97c225517b4ce1a95bde4b8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "circuit/index.html.twig"));
+        $__internal_c2a2c56b543c66a32ee8f6cb7c1da63ea1fb9525594ccc19e4e71d3a7c395105 = $this->env->getExtension("native_profiler");
+        $__internal_c2a2c56b543c66a32ee8f6cb7c1da63ea1fb9525594ccc19e4e71d3a7c395105->enter($__internal_c2a2c56b543c66a32ee8f6cb7c1da63ea1fb9525594ccc19e4e71d3a7c395105_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "circuit/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_0eb28ff4fbe915c7726f4183133fe105d30603e1c97c225517b4ce1a95bde4b8->leave($__internal_0eb28ff4fbe915c7726f4183133fe105d30603e1c97c225517b4ce1a95bde4b8_prof);
+        $__internal_c2a2c56b543c66a32ee8f6cb7c1da63ea1fb9525594ccc19e4e71d3a7c395105->leave($__internal_c2a2c56b543c66a32ee8f6cb7c1da63ea1fb9525594ccc19e4e71d3a7c395105_prof);
 
     }
 
     // line 3
     public function block_main($context, array $blocks = array())
     {
-        $__internal_bed273d6613e4fe49386bc5e455699a9968ae5764c505974c4dce8176127f1a8 = $this->env->getExtension("native_profiler");
-        $__internal_bed273d6613e4fe49386bc5e455699a9968ae5764c505974c4dce8176127f1a8->enter($__internal_bed273d6613e4fe49386bc5e455699a9968ae5764c505974c4dce8176127f1a8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "main"));
+        $__internal_c12d41cb543fbc9854adba3bbc6434b31955943a0e75500fce7fd70baf7514ea = $this->env->getExtension("native_profiler");
+        $__internal_c12d41cb543fbc9854adba3bbc6434b31955943a0e75500fce7fd70baf7514ea->enter($__internal_c12d41cb543fbc9854adba3bbc6434b31955943a0e75500fce7fd70baf7514ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "main"));
 
         // line 4
         echo "    <h1>Nos circuits</h1>
@@ -53,53 +53,52 @@ class __TwigTemplate_d33a12fb7500565dcd23fd4739f2f3ac6b7470f63c61b75fe5c66c060df
         // line 16
         if ($this->env->getExtension('security')->isGranted("ROLE_USER")) {
             // line 17
-            echo "                    <th>Suppression</th>
-                    <th>Modification</th>
+            echo "                    <th>Modification</th>
                 ";
         }
-        // line 20
+        // line 19
         echo "
             </tr>
         </thead>
         <tbody>
         ";
-        // line 24
+        // line 23
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["circuits"]) ? $context["circuits"] : $this->getContext($context, "circuits")));
         foreach ($context['_seq'] as $context["_key"] => $context["circuit"]) {
-            // line 25
+            // line 24
             echo "            <tr>
                 <td><a href=\"";
-            // line 26
+            // line 25
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("circuit_show", array("id" => $this->getAttribute($context["circuit"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["circuit"], "id", array()), "html", null, true);
             echo "</a></td>
                 <td>";
-            // line 27
+            // line 26
             echo twig_escape_filter($this->env, $this->getAttribute($context["circuit"], "description", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 28
+            // line 27
             echo twig_escape_filter($this->env, $this->getAttribute($context["circuit"], "paysDepart", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 29
+            // line 28
             echo twig_escape_filter($this->env, $this->getAttribute($context["circuit"], "villeDepart", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 30
+            // line 29
             echo twig_escape_filter($this->env, $this->getAttribute($context["circuit"], "villeArrivee", array()), "html", null, true);
             echo "</td>
                 <td align=\"center\" style=\"margin: 0px auto;\">";
-            // line 31
+            // line 30
             echo twig_escape_filter($this->env, $this->getAttribute($context["circuit"], "dureeCircuit", array()), "html", null, true);
             echo "</td>
                 <td>
                     <ul>
                         <li>
                             <a href=\"";
-            // line 35
+            // line 34
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("circuit_show", array("id" => $this->getAttribute($context["circuit"], "id", array()))), "html", null, true);
             echo "\">détails</a>
 
@@ -107,24 +106,15 @@ class __TwigTemplate_d33a12fb7500565dcd23fd4739f2f3ac6b7470f63c61b75fe5c66c060df
                     </ul>
                 </td>
                 ";
-            // line 40
-            if ($this->env->getExtension('security')->isGranted("ROLE_ADMIN")) {
-                // line 41
-                echo "                    <td>
-                        <ul>
-                            <li>
-                                <a href=\"";
-                // line 44
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("circuit_remove", array("id" => $this->getAttribute($context["circuit"], "id", array()))), "html", null, true);
-                echo "\">Supprimer</a>
-                            </li>
-                        </ul>
-                    </td>
+            // line 39
+            if ($this->env->getExtension('security')->isGranted("ROLE_USER")) {
+                // line 40
+                echo "
                     <td>
                     <ul>
                         <li>
                             <a href=\"";
-                // line 51
+                // line 44
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("circuit_modify", array("id" => $this->getAttribute($context["circuit"], "id", array()))), "html", null, true);
                 echo "\">Modifier</a>
                         </li>
@@ -133,7 +123,7 @@ class __TwigTemplate_d33a12fb7500565dcd23fd4739f2f3ac6b7470f63c61b75fe5c66c060df
 
                 ";
             }
-            // line 57
+            // line 50
             echo "
 
             </tr>
@@ -142,19 +132,19 @@ class __TwigTemplate_d33a12fb7500565dcd23fd4739f2f3ac6b7470f63c61b75fe5c66c060df
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['circuit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 61
+        // line 54
         echo "
         </tbody>
     </table>
 
     ";
-        // line 65
-        if ($this->env->getExtension('security')->isGranted("ROLE_ADMIN")) {
-            // line 66
+        // line 58
+        if ($this->env->getExtension('security')->isGranted("ROLE_USER")) {
+            // line 59
             echo "        <br/><br/>
 
         <a href=\"";
-            // line 68
+            // line 61
             echo $this->env->getExtension('routing')->getPath("circuit_add");
             echo "\">Ajouter un voyage</a>
 
@@ -163,11 +153,11 @@ class __TwigTemplate_d33a12fb7500565dcd23fd4739f2f3ac6b7470f63c61b75fe5c66c060df
 
     ";
         }
-        // line 74
+        // line 67
         echo "    
 ";
         
-        $__internal_bed273d6613e4fe49386bc5e455699a9968ae5764c505974c4dce8176127f1a8->leave($__internal_bed273d6613e4fe49386bc5e455699a9968ae5764c505974c4dce8176127f1a8_prof);
+        $__internal_c12d41cb543fbc9854adba3bbc6434b31955943a0e75500fce7fd70baf7514ea->leave($__internal_c12d41cb543fbc9854adba3bbc6434b31955943a0e75500fce7fd70baf7514ea_prof);
 
     }
 
@@ -183,7 +173,7 @@ class __TwigTemplate_d33a12fb7500565dcd23fd4739f2f3ac6b7470f63c61b75fe5c66c060df
 
     public function getDebugInfo()
     {
-        return array (  167 => 74,  158 => 68,  154 => 66,  152 => 65,  146 => 61,  137 => 57,  128 => 51,  118 => 44,  113 => 41,  111 => 40,  103 => 35,  96 => 31,  92 => 30,  88 => 29,  84 => 28,  80 => 27,  74 => 26,  71 => 25,  67 => 24,  61 => 20,  56 => 17,  54 => 16,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  157 => 67,  148 => 61,  144 => 59,  142 => 58,  136 => 54,  127 => 50,  118 => 44,  112 => 40,  110 => 39,  102 => 34,  95 => 30,  91 => 29,  87 => 28,  83 => 27,  79 => 26,  73 => 25,  70 => 24,  66 => 23,  60 => 19,  56 => 17,  54 => 16,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends 'agvoybase.html.twig' %}*/
@@ -202,7 +192,6 @@ class __TwigTemplate_d33a12fb7500565dcd23fd4739f2f3ac6b7470f63c61b75fe5c66c060df
 /*                 <th>Duree circuit</th>*/
 /*                 <th>Actions</th>*/
 /*                 {% if is_granted('ROLE_USER') %}*/
-/*                     <th>Suppression</th>*/
 /*                     <th>Modification</th>*/
 /*                 {% endif %}*/
 /* */
@@ -225,14 +214,8 @@ class __TwigTemplate_d33a12fb7500565dcd23fd4739f2f3ac6b7470f63c61b75fe5c66c060df
 /*                         </li>*/
 /*                     </ul>*/
 /*                 </td>*/
-/*                 {% if is_granted('ROLE_ADMIN') %}*/
-/*                     <td>*/
-/*                         <ul>*/
-/*                             <li>*/
-/*                                 <a href="{{ path('circuit_remove', { 'id': circuit.id }) }}">Supprimer</a>*/
-/*                             </li>*/
-/*                         </ul>*/
-/*                     </td>*/
+/*                 {% if is_granted('ROLE_USER') %}*/
+/* */
 /*                     <td>*/
 /*                     <ul>*/
 /*                         <li>*/
@@ -250,7 +233,7 @@ class __TwigTemplate_d33a12fb7500565dcd23fd4739f2f3ac6b7470f63c61b75fe5c66c060df
 /*         </tbody>*/
 /*     </table>*/
 /* */
-/*     {% if is_granted('ROLE_ADMIN') %}*/
+/*     {% if is_granted('ROLE_USER') %}*/
 /*         <br/><br/>*/
 /* */
 /*         <a href="{{ path('circuit_add') }}">Ajouter un voyage</a>*/

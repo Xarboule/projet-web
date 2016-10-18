@@ -100,9 +100,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // circuit_add
-        if ($pathinfo === '/circuit/add') {
-            return array (  '_controller' => 'AppBundle\\Controller\\AddController::addAction',  '_route' => 'circuit_add',);
+        if (0 === strpos($pathinfo, '/circuit/add')) {
+            // circuit_add
+            if ($pathinfo === '/circuit/add') {
+                return array (  '_controller' => 'AppBundle\\Controller\\AddController::addAction',  '_route' => 'circuit_add',);
+            }
+
+            // step_add
+            if (0 === strpos($pathinfo, '/circuit/addstep') && preg_match('#^/circuit/addstep/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'step_add')), array (  '_controller' => 'AppBundle\\Controller\\AddStepController::addStep',));
+            }
+
         }
 
         // homepage
@@ -126,16 +134,30 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'circuit_modify')), array (  '_controller' => 'AppBundle\\Controller\\ModifyController::modifyAction',));
             }
 
-            // circuit_remove
-            if (0 === strpos($pathinfo, '/circuit/remove') && preg_match('#^/circuit/remove/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'HEAD'));
-                    goto not_circuit_remove;
-                }
+            if (0 === strpos($pathinfo, '/circuit/remove')) {
+                // circuit_remove
+                if (preg_match('#^/circuit/remove/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'HEAD'));
+                        goto not_circuit_remove;
+                    }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'circuit_remove')), array (  '_controller' => 'AppBundle\\Controller\\ModifyController::removeCircuit',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'circuit_remove')), array (  '_controller' => 'AppBundle\\Controller\\ModifyController::removeCircuit',));
+                }
+                not_circuit_remove:
+
+                // step_remove
+                if (0 === strpos($pathinfo, '/circuit/removestep') && preg_match('#^/circuit/removestep/(?P<id>[^/]++)/(?P<idStep>\\d+)$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'HEAD'));
+                        goto not_step_remove;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'step_remove')), array (  '_controller' => 'AppBundle\\Controller\\ModifyController::removeStep',));
+                }
+                not_step_remove:
+
             }
-            not_circuit_remove:
 
             // circuit_index
             if (rtrim($pathinfo, '/') === '/circuit') {

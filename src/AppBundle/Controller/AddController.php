@@ -42,17 +42,14 @@ class AddController extends CircuitController
             ->add('VilleDepart', TextType::class)
             ->add('VilleArrivee', TextType::class)
             ->add('DureeCircuit', TextType::class)
-            ->add('save', SubmitType::class, array('label' => 'Create Circuit'));
+            ->add('save', SubmitType::class, array('label' => 'Ajouter le voyage'));
 
         $form = $formBuilder->getForm();
 
-        ///
-        // On fait le lien Requête <-> Formulaire
-        // À partir de maintenant, la variable $advert contient les valeurs entrées dans le formulaire par le visiteur
+
         $form->handleRequest($request);
 
-        // On vérifie que les valeurs entrées sont correctes
-        // (Nous verrons la validation des objets en détail dans le prochain chapitre)
+
         if ($form->isValid()) {
             $circuit = new Circuit();
             $circuit->setPaysDepart($form->get('PaysDepart')->getData());
@@ -68,9 +65,7 @@ class AddController extends CircuitController
             return $this->redirectToRoute('circuit_index');
         }
 
-        // À ce stade, le formulaire n'est pas valide car :
-        // - Soit la requête est de type GET, donc le visiteur vient d'arriver sur la page et veut voir le formulaire
-        // - Soit la requête est de type POST, mais le formulaire contient des valeurs invalides, donc on l'affiche de nouveau
+
         return $this->render('circuit/add.html.twig', array(
             'form' => $form->createView()));
     }
