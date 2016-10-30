@@ -56,6 +56,12 @@
 		{% endfor %}
 		</table>
 	</div> {# programmations #}
+		</br></br>
+		{% if is_granted("ROLE_USER") %}
+			<a href="{{ path('circuit_modify', { 'id': circuit.id }) }}">Modifier ce voyage</a>
+		{% endif %}
+		</br></br>
+
     <ul>
         <li>
             <a href="{{ path('circuit_index') }}">Retour à la liste</a>

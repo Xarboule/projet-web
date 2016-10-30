@@ -41,7 +41,6 @@ class AddController extends CircuitController
             ->add('PaysDepart', TextType::class)
             ->add('VilleDepart', TextType::class)
             ->add('VilleArrivee', TextType::class)
-            ->add('DureeCircuit', TextType::class)
             ->add('save', SubmitType::class, array('label' => 'Ajouter le voyage'));
 
         $form = $formBuilder->getForm();
@@ -56,7 +55,8 @@ class AddController extends CircuitController
             $circuit->setDescription($form->get('Description')->getData());
             $circuit->setVilleDepart($form->get('VilleDepart')->getData());
             $circuit->setVilleArrivee($form->get('VilleArrivee')->getData());
-            $circuit->setDureeCircuit($form->get('DureeCircuit')->getData());
+            $circuit->setDureeCircuit(0);
+
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($circuit);

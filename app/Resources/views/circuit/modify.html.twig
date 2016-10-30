@@ -27,7 +27,7 @@
                 <td>{{ etape.numeroEtape }}</td>
                 <td>{{ etape.villeEtape }}</td>
                 <td>{{ etape.nombreJours }} j.</td>
-                <td><a href=""{{ path('step_remove', {'id' : circuit.id, 'idStep' : etape.id}) }}>Supprimer</a></td>
+                <td><a href="{{ path('step_remove', {'id' : circuit.id, 'idStep' : etape.id}) }}">Supprimer</a></td>
             </tr>
         {% endfor %} {# circuit.etapes #}
         </tbody>

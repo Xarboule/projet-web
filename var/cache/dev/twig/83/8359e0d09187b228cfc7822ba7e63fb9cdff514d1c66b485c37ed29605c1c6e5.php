@@ -1,6 +1,6 @@
 <?php
 
-/* circuit/modify.html.twig */
+/* :circuit:modify.html.twig */
 class __TwigTemplate_805b4d74ef1f8da2b359bbef0a13605691db4810f04ff7e84e2c71c9609928af extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_805b4d74ef1f8da2b359bbef0a13605691db4810f04ff7e84e2c71c9609
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("agvoybase.html.twig", "circuit/modify.html.twig", 1);
+        $this->parent = $this->loadTemplate("agvoybase.html.twig", ":circuit:modify.html.twig", 1);
         $this->blocks = array(
             'main' => array($this, 'block_main'),
         );
@@ -21,20 +21,20 @@ class __TwigTemplate_805b4d74ef1f8da2b359bbef0a13605691db4810f04ff7e84e2c71c9609
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_480331fea0897db1a3e49ad5f1fe4bc9825c5b197d919ac1ddd236965c266f5b = $this->env->getExtension("native_profiler");
-        $__internal_480331fea0897db1a3e49ad5f1fe4bc9825c5b197d919ac1ddd236965c266f5b->enter($__internal_480331fea0897db1a3e49ad5f1fe4bc9825c5b197d919ac1ddd236965c266f5b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "circuit/modify.html.twig"));
+        $__internal_a9d396f554bacf96d9fc060d3ee86118ea72be860634c8f8097658d0ba7dfc4c = $this->env->getExtension("native_profiler");
+        $__internal_a9d396f554bacf96d9fc060d3ee86118ea72be860634c8f8097658d0ba7dfc4c->enter($__internal_a9d396f554bacf96d9fc060d3ee86118ea72be860634c8f8097658d0ba7dfc4c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":circuit:modify.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_480331fea0897db1a3e49ad5f1fe4bc9825c5b197d919ac1ddd236965c266f5b->leave($__internal_480331fea0897db1a3e49ad5f1fe4bc9825c5b197d919ac1ddd236965c266f5b_prof);
+        $__internal_a9d396f554bacf96d9fc060d3ee86118ea72be860634c8f8097658d0ba7dfc4c->leave($__internal_a9d396f554bacf96d9fc060d3ee86118ea72be860634c8f8097658d0ba7dfc4c_prof);
 
     }
 
     // line 3
     public function block_main($context, array $blocks = array())
     {
-        $__internal_7786216bc91ba2277ae3bf03314ae392cf9740d262a0cf3cc96aff338363fc07 = $this->env->getExtension("native_profiler");
-        $__internal_7786216bc91ba2277ae3bf03314ae392cf9740d262a0cf3cc96aff338363fc07->enter($__internal_7786216bc91ba2277ae3bf03314ae392cf9740d262a0cf3cc96aff338363fc07_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "main"));
+        $__internal_f029fdf8e5369d75ea6114446c8b3cdbebe97d480bd4e653448262e3b70f2b92 = $this->env->getExtension("native_profiler");
+        $__internal_f029fdf8e5369d75ea6114446c8b3cdbebe97d480bd4e653448262e3b70f2b92->enter($__internal_f029fdf8e5369d75ea6114446c8b3cdbebe97d480bd4e653448262e3b70f2b92_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "main"));
 
         // line 4
         echo "
@@ -86,10 +86,10 @@ class __TwigTemplate_805b4d74ef1f8da2b359bbef0a13605691db4810f04ff7e84e2c71c9609
             // line 29
             echo twig_escape_filter($this->env, $this->getAttribute($context["etape"], "nombreJours", array()), "html", null, true);
             echo " j.</td>
-                <td><a href=\"\"";
+                <td><a href=\"";
             // line 30
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("step_remove", array("id" => $this->getAttribute((isset($context["circuit"]) ? $context["circuit"] : $this->getContext($context, "circuit")), "id", array()), "idStep" => $this->getAttribute($context["etape"], "id", array()))), "html", null, true);
-            echo ">Supprimer</a></td>
+            echo "\">Supprimer</a></td>
             </tr>
         ";
         }
@@ -116,13 +116,13 @@ class __TwigTemplate_805b4d74ef1f8da2b359bbef0a13605691db4810f04ff7e84e2c71c9609
 
 ";
         
-        $__internal_7786216bc91ba2277ae3bf03314ae392cf9740d262a0cf3cc96aff338363fc07->leave($__internal_7786216bc91ba2277ae3bf03314ae392cf9740d262a0cf3cc96aff338363fc07_prof);
+        $__internal_f029fdf8e5369d75ea6114446c8b3cdbebe97d480bd4e653448262e3b70f2b92->leave($__internal_f029fdf8e5369d75ea6114446c8b3cdbebe97d480bd4e653448262e3b70f2b92_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "circuit/modify.html.twig";
+        return ":circuit:modify.html.twig";
     }
 
     public function isTraitable()
@@ -164,7 +164,7 @@ class __TwigTemplate_805b4d74ef1f8da2b359bbef0a13605691db4810f04ff7e84e2c71c9609
 /*                 <td>{{ etape.numeroEtape }}</td>*/
 /*                 <td>{{ etape.villeEtape }}</td>*/
 /*                 <td>{{ etape.nombreJours }} j.</td>*/
-/*                 <td><a href=""{{ path('step_remove', {'id' : circuit.id, 'idStep' : etape.id}) }}>Supprimer</a></td>*/
+/*                 <td><a href="{{ path('step_remove', {'id' : circuit.id, 'idStep' : etape.id}) }}">Supprimer</a></td>*/
 /*             </tr>*/
 /*         {% endfor %} {# circuit.etapes #}*/
 /*         </tbody>*/

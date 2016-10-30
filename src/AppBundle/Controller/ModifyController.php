@@ -11,10 +11,13 @@ namespace AppBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Entity\Circuit;
+use AppBundle\Entity\Etape;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 
@@ -46,7 +49,6 @@ class ModifyController extends CircuitController
             ->add('PaysDepart', TextType::class)
             ->add('VilleDepart', TextType::class)
             ->add('VilleArrivee', TextType::class)
-            ->add('DureeCircuit', TextType::class)
             ->add('save', SubmitType::class, array('label' => 'Modifier Circuit'));
 
         $form = $formBuilder->getForm();
@@ -63,7 +65,6 @@ class ModifyController extends CircuitController
             $circuit->setDescription($form->get('Description')->getData());
             $circuit->setVilleDepart($form->get('VilleDepart')->getData());
             $circuit->setVilleArrivee($form->get('VilleArrivee')->getData());
-            $circuit->setDureeCircuit($form->get('DureeCircuit')->getData());
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($circuit);
@@ -102,21 +103,26 @@ class ModifyController extends CircuitController
     }
 
     /**
-     * Finds and displays a Circuit entity.
      *
-     * @Route("/circuit/removestep/{id}/{idStep}", name="step_remove", requirements={
-     *              "idStep" : "\d+"})
-     * @Method("GET")
+     * @Route("/circuit/{id}/removestep/{idStep}", name="step_remove", requirements={
+     *              "idStep" : "\d+",
+     *              "id" : "\d+"})
+     * @ParamConverter("etape", options={"mapping": {"idStep"   : "id"}})
      */
-    public function removeStep(Circuit $circuit, Etape $etape){
+    public function removeStep($id, Etape $etape){
 
+        if (!$this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
+            throw $this->createAccessDeniedException();
+        }
+
+        $circuit = $this->getDoctrine()->getManager()->getRepository('AppBundle:Circuit')->find($id);
         $circuit->removeEtape($etape);
 
-        $em = $this->getDoctrine()->getEntityManager();
-        $em->persist($etape, $circuit);
-        $em->flush();
+        $this->getDoctrine()->getManager()->flush();
 
-        return $this->redirect($this->generateUrl('circuit_modify'));
+        return $this->redirectToRoute('circuit_modify', ["id" => $id]);
     }
+
+
 
 }

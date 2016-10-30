@@ -1,6 +1,6 @@
 <?php
 
-/* agvoybase.html.twig */
+/* ::agvoybase.html.twig */
 class __TwigTemplate_6faf108a4535e66ea4b080d5d5e6a0cdeee791b1e19c304ebf627b732ad01178 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_6faf108a4535e66ea4b080d5d5e6a0cdeee791b1e19c304ebf627b732ad
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "agvoybase.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "::agvoybase.html.twig", 1);
         $this->blocks = array(
             'header' => array($this, 'block_header'),
             'header_navigation_links' => array($this, 'block_header_navigation_links'),
@@ -23,20 +23,20 @@ class __TwigTemplate_6faf108a4535e66ea4b080d5d5e6a0cdeee791b1e19c304ebf627b732ad
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_24ed79c8c93d45ffc329541d1ae77e6987683752cc259da976ce1d883c235998 = $this->env->getExtension("native_profiler");
-        $__internal_24ed79c8c93d45ffc329541d1ae77e6987683752cc259da976ce1d883c235998->enter($__internal_24ed79c8c93d45ffc329541d1ae77e6987683752cc259da976ce1d883c235998_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "agvoybase.html.twig"));
+        $__internal_0f6e40b1a305a2bb1af4b0bd70d725c68e5303ee5f614e253e74c6867f83ad61 = $this->env->getExtension("native_profiler");
+        $__internal_0f6e40b1a305a2bb1af4b0bd70d725c68e5303ee5f614e253e74c6867f83ad61->enter($__internal_0f6e40b1a305a2bb1af4b0bd70d725c68e5303ee5f614e253e74c6867f83ad61_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::agvoybase.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_24ed79c8c93d45ffc329541d1ae77e6987683752cc259da976ce1d883c235998->leave($__internal_24ed79c8c93d45ffc329541d1ae77e6987683752cc259da976ce1d883c235998_prof);
+        $__internal_0f6e40b1a305a2bb1af4b0bd70d725c68e5303ee5f614e253e74c6867f83ad61->leave($__internal_0f6e40b1a305a2bb1af4b0bd70d725c68e5303ee5f614e253e74c6867f83ad61_prof);
 
     }
 
     // line 3
     public function block_header($context, array $blocks = array())
     {
-        $__internal_2f9d01433b87c6787d5be42f6e686326ec9ade7412d32b7a0ac557339542cd0f = $this->env->getExtension("native_profiler");
-        $__internal_2f9d01433b87c6787d5be42f6e686326ec9ade7412d32b7a0ac557339542cd0f->enter($__internal_2f9d01433b87c6787d5be42f6e686326ec9ade7412d32b7a0ac557339542cd0f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
+        $__internal_13e16b3c97611b927493e27836073147451f0ca9f8b634aa7f8b27b7d3c25349 = $this->env->getExtension("native_profiler");
+        $__internal_13e16b3c97611b927493e27836073147451f0ca9f8b634aa7f8b27b7d3c25349->enter($__internal_13e16b3c97611b927493e27836073147451f0ca9f8b634aa7f8b27b7d3c25349_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
 
         // line 4
         echo "            <header>
@@ -75,15 +75,15 @@ class __TwigTemplate_6faf108a4535e66ea4b080d5d5e6a0cdeee791b1e19c304ebf627b732ad
             </header>
 ";
         
-        $__internal_2f9d01433b87c6787d5be42f6e686326ec9ade7412d32b7a0ac557339542cd0f->leave($__internal_2f9d01433b87c6787d5be42f6e686326ec9ade7412d32b7a0ac557339542cd0f_prof);
+        $__internal_13e16b3c97611b927493e27836073147451f0ca9f8b634aa7f8b27b7d3c25349->leave($__internal_13e16b3c97611b927493e27836073147451f0ca9f8b634aa7f8b27b7d3c25349_prof);
 
     }
 
     // line 25
     public function block_header_navigation_links($context, array $blocks = array())
     {
-        $__internal_390eeaa25abc7d4980464d3d4edc1793d960f5505e8bd66374b5cf632f1ec815 = $this->env->getExtension("native_profiler");
-        $__internal_390eeaa25abc7d4980464d3d4edc1793d960f5505e8bd66374b5cf632f1ec815->enter($__internal_390eeaa25abc7d4980464d3d4edc1793d960f5505e8bd66374b5cf632f1ec815_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header_navigation_links"));
+        $__internal_7561bc4d5cdd71bb5838a2fe8ab2bf651517cd09d2b3368d31b158ac343044a1 = $this->env->getExtension("native_profiler");
+        $__internal_7561bc4d5cdd71bb5838a2fe8ab2bf651517cd09d2b3368d31b158ac343044a1->enter($__internal_7561bc4d5cdd71bb5838a2fe8ab2bf651517cd09d2b3368d31b158ac343044a1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header_navigation_links"));
 
         // line 26
         echo "                                    <li>
@@ -95,7 +95,7 @@ class __TwigTemplate_6faf108a4535e66ea4b080d5d5e6a0cdeee791b1e19c304ebf627b732ad
                                     <li>
                                     ";
         // line 30
-        if ($this->env->getExtension('security')->isGranted("ROLE_ADMIN")) {
+        if ($this->env->getExtension('security')->isGranted("ROLE_USER")) {
             // line 31
             echo "                                        <a href=\"";
             echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
@@ -119,30 +119,30 @@ class __TwigTemplate_6faf108a4535e66ea4b080d5d5e6a0cdeee791b1e19c304ebf627b732ad
         // line 47
         echo "                                ";
         
-        $__internal_390eeaa25abc7d4980464d3d4edc1793d960f5505e8bd66374b5cf632f1ec815->leave($__internal_390eeaa25abc7d4980464d3d4edc1793d960f5505e8bd66374b5cf632f1ec815_prof);
+        $__internal_7561bc4d5cdd71bb5838a2fe8ab2bf651517cd09d2b3368d31b158ac343044a1->leave($__internal_7561bc4d5cdd71bb5838a2fe8ab2bf651517cd09d2b3368d31b158ac343044a1_prof);
 
     }
 
     // line 56
     public function block_sidebar($context, array $blocks = array())
     {
-        $__internal_a71d69e7b769795ba4f2a86456c810d8e2a75d19b7a8b9aff486692db4334a35 = $this->env->getExtension("native_profiler");
-        $__internal_a71d69e7b769795ba4f2a86456c810d8e2a75d19b7a8b9aff486692db4334a35->enter($__internal_a71d69e7b769795ba4f2a86456c810d8e2a75d19b7a8b9aff486692db4334a35_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
+        $__internal_c32de6d2d2dab828e712169b4c4a2584bde2c4756483d27b22bfc3fd588ca7b8 = $this->env->getExtension("native_profiler");
+        $__internal_c32de6d2d2dab828e712169b4c4a2584bde2c4756483d27b22bfc3fd588ca7b8->enter($__internal_c32de6d2d2dab828e712169b4c4a2584bde2c4756483d27b22bfc3fd588ca7b8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
 
         // line 57
         echo "\t<h4>Tux Voyages</h4>
-\t<p>Avec Tux voyages, faites un \"mv ~/tousMesProblemes /dev/null\", et voyagez avec l'esprit tranquille !</p>
-    <img src=\"http://www.gifsanimes.fr/images/t/tux/tux-gifs-animes-7900876.gif\" style=\"width: 50%; height: 50%\" >
+\t<p>Avec Tux voyages, faites un \"mv ~/tousMesProblemes /dev/null\", et voyagez avec l'esprit libre !</p>
+    <img src=\"http://www.gifsanimes.fr/images/t/tux/tux-gifs-animes-7900876.gif\" style=\"width: 50%; height: 50%; vertical-align: middle;\" >
 
 ";
         
-        $__internal_a71d69e7b769795ba4f2a86456c810d8e2a75d19b7a8b9aff486692db4334a35->leave($__internal_a71d69e7b769795ba4f2a86456c810d8e2a75d19b7a8b9aff486692db4334a35_prof);
+        $__internal_c32de6d2d2dab828e712169b4c4a2584bde2c4756483d27b22bfc3fd588ca7b8->leave($__internal_c32de6d2d2dab828e712169b4c4a2584bde2c4756483d27b22bfc3fd588ca7b8_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "agvoybase.html.twig";
+        return "::agvoybase.html.twig";
     }
 
     public function isTraitable()
@@ -184,7 +184,7 @@ class __TwigTemplate_6faf108a4535e66ea4b080d5d5e6a0cdeee791b1e19c304ebf627b732ad
 /*                                         <a href="{{ path('circuit_index') }}">Voyages</a>*/
 /*                                     </li>*/
 /*                                     <li>*/
-/*                                     {% if is_granted('ROLE_ADMIN') %}*/
+/*                                     {% if is_granted('ROLE_USER') %}*/
 /*                                         <a href="{{ path('fos_user_security_logout') }}">*/
 /*                                             Logout*/
 /*                                         </a>*/
@@ -212,7 +212,7 @@ class __TwigTemplate_6faf108a4535e66ea4b080d5d5e6a0cdeee791b1e19c304ebf627b732ad
 /*         */
 /* {% block sidebar %}*/
 /* 	<h4>Tux Voyages</h4>*/
-/* 	<p>Avec Tux voyages, faites un "mv ~/tousMesProblemes /dev/null", et voyagez avec l'esprit tranquille !</p>*/
-/*     <img src="http://www.gifsanimes.fr/images/t/tux/tux-gifs-animes-7900876.gif" style="width: 50%; height: 50%" >*/
+/* 	<p>Avec Tux voyages, faites un "mv ~/tousMesProblemes /dev/null", et voyagez avec l'esprit libre !</p>*/
+/*     <img src="http://www.gifsanimes.fr/images/t/tux/tux-gifs-animes-7900876.gif" style="width: 50%; height: 50%; vertical-align: middle;" >*/
 /* */
 /* {% endblock %}*/

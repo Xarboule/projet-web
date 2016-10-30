@@ -1,6 +1,6 @@
 <?php
 
-/* circuit/show.html.twig */
+/* :circuit:show.html.twig */
 class __TwigTemplate_fa82ce4f70424960a273c7b91aa2b3b81458fbc48a15c20017ab9890dcc67641 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_fa82ce4f70424960a273c7b91aa2b3b81458fbc48a15c20017ab9890dcc
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("agvoybase.html.twig", "circuit/show.html.twig", 1);
+        $this->parent = $this->loadTemplate("agvoybase.html.twig", ":circuit:show.html.twig", 1);
         $this->blocks = array(
             'main' => array($this, 'block_main'),
         );
@@ -21,20 +21,20 @@ class __TwigTemplate_fa82ce4f70424960a273c7b91aa2b3b81458fbc48a15c20017ab9890dcc
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b08a79044825075da645273a1cb28a6e8e7672f21fe6ab88c696f6d6c421f1ce = $this->env->getExtension("native_profiler");
-        $__internal_b08a79044825075da645273a1cb28a6e8e7672f21fe6ab88c696f6d6c421f1ce->enter($__internal_b08a79044825075da645273a1cb28a6e8e7672f21fe6ab88c696f6d6c421f1ce_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "circuit/show.html.twig"));
+        $__internal_76b525f6573483647f1d0686626f11ad36748434f085e3526f529d346d7a96e6 = $this->env->getExtension("native_profiler");
+        $__internal_76b525f6573483647f1d0686626f11ad36748434f085e3526f529d346d7a96e6->enter($__internal_76b525f6573483647f1d0686626f11ad36748434f085e3526f529d346d7a96e6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":circuit:show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_b08a79044825075da645273a1cb28a6e8e7672f21fe6ab88c696f6d6c421f1ce->leave($__internal_b08a79044825075da645273a1cb28a6e8e7672f21fe6ab88c696f6d6c421f1ce_prof);
+        $__internal_76b525f6573483647f1d0686626f11ad36748434f085e3526f529d346d7a96e6->leave($__internal_76b525f6573483647f1d0686626f11ad36748434f085e3526f529d346d7a96e6_prof);
 
     }
 
     // line 3
     public function block_main($context, array $blocks = array())
     {
-        $__internal_602775bf9015e03f8a854837835ff6ff1645f6e380a229b874c34d4eacef8cf9 = $this->env->getExtension("native_profiler");
-        $__internal_602775bf9015e03f8a854837835ff6ff1645f6e380a229b874c34d4eacef8cf9->enter($__internal_602775bf9015e03f8a854837835ff6ff1645f6e380a229b874c34d4eacef8cf9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "main"));
+        $__internal_2fbcc854209f3629696dd7e39f24c2736052a0e20bb0a82593b233004423c68c = $this->env->getExtension("native_profiler");
+        $__internal_2fbcc854209f3629696dd7e39f24c2736052a0e20bb0a82593b233004423c68c->enter($__internal_2fbcc854209f3629696dd7e39f24c2736052a0e20bb0a82593b233004423c68c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "main"));
 
         // line 4
         echo "    \t
@@ -149,26 +149,39 @@ class __TwigTemplate_fa82ce4f70424960a273c7b91aa2b3b81458fbc48a15c20017ab9890dcc
         echo "\t\t</table>
 \t</div> ";
         // line 59
-        echo "    <ul>
+        echo "\t\t</br></br>
+\t\t";
+        // line 60
+        if ($this->env->getExtension('security')->isGranted("ROLE_USER")) {
+            // line 61
+            echo "\t\t\t<a href=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("circuit_modify", array("id" => $this->getAttribute((isset($context["circuit"]) ? $context["circuit"] : $this->getContext($context, "circuit")), "id", array()))), "html", null, true);
+            echo "\">Modifier ce voyage</a>
+\t\t";
+        }
+        // line 63
+        echo "\t\t</br></br>
+
+    <ul>
         <li>
             <a href=\"";
-        // line 61
+        // line 67
         echo $this->env->getExtension('routing')->getPath("circuit_index");
         echo "\">Retour à la liste</a>
         </li>
     </ul>
 \t</div> ";
-        // line 65
+        // line 71
         echo "    
 ";
         
-        $__internal_602775bf9015e03f8a854837835ff6ff1645f6e380a229b874c34d4eacef8cf9->leave($__internal_602775bf9015e03f8a854837835ff6ff1645f6e380a229b874c34d4eacef8cf9_prof);
+        $__internal_2fbcc854209f3629696dd7e39f24c2736052a0e20bb0a82593b233004423c68c->leave($__internal_2fbcc854209f3629696dd7e39f24c2736052a0e20bb0a82593b233004423c68c_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "circuit/show.html.twig";
+        return ":circuit:show.html.twig";
     }
 
     public function isTraitable()
@@ -178,7 +191,7 @@ class __TwigTemplate_fa82ce4f70424960a273c7b91aa2b3b81458fbc48a15c20017ab9890dcc
 
     public function getDebugInfo()
     {
-        return array (  162 => 65,  156 => 61,  152 => 59,  149 => 57,  140 => 54,  136 => 53,  132 => 52,  129 => 51,  125 => 50,  111 => 38,  107 => 35,  105 => 34,  96 => 32,  92 => 31,  88 => 30,  85 => 29,  81 => 28,  59 => 15,  54 => 13,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  175 => 71,  169 => 67,  163 => 63,  157 => 61,  155 => 60,  152 => 59,  149 => 57,  140 => 54,  136 => 53,  132 => 52,  129 => 51,  125 => 50,  111 => 38,  107 => 35,  105 => 34,  96 => 32,  92 => 31,  88 => 30,  85 => 29,  81 => 28,  59 => 15,  54 => 13,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends 'agvoybase.html.twig' %}*/
@@ -239,6 +252,12 @@ class __TwigTemplate_fa82ce4f70424960a273c7b91aa2b3b81458fbc48a15c20017ab9890dcc
 /* 		{% endfor %}*/
 /* 		</table>*/
 /* 	</div> {# programmations #}*/
+/* 		</br></br>*/
+/* 		{% if is_granted("ROLE_USER") %}*/
+/* 			<a href="{{ path('circuit_modify', { 'id': circuit.id }) }}">Modifier ce voyage</a>*/
+/* 		{% endif %}*/
+/* 		</br></br>*/
+/* */
 /*     <ul>*/
 /*         <li>*/
 /*             <a href="{{ path('circuit_index') }}">Retour à la liste</a>*/

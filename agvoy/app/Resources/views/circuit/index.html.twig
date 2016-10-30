@@ -1,0 +1,68 @@
+{% extends 'agvoybase.html.twig' %}
+
+{% block main %}
+    <h1>Nos circuits</h1>
+
+    <table cellspacing="100" cellpadding="100">
+        <thead align="center" style="margin: 0px auto;">
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                <th>Pays depart</th>
+                <th>Ville depart</th>
+                <th>Ville arrivee</th>
+                <th>Duree circuit</th>
+                <th>Actions</th>
+                {% if is_granted('ROLE_USER') %}
+                    <th>Modification</th>
+                {% endif %}
+
+            </tr>
+        </thead>
+        <tbody>
+        {% for circuit in circuits %}
+            <tr>
+                <td><a href="{{ path('circuit_show', { 'id': circuit.id }) }}">{{ circuit.id }}</a></td>
+                <td>{{ circuit.description }}</td>
+                <td>{{ circuit.paysDepart }}</td>
+                <td>{{ circuit.villeDepart }}</td>
+                <td>{{ circuit.villeArrivee }}</td>
+                <td align="center" style="margin: 0px auto;">{{ circuit.dureeCircuit }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('circuit_show', { 'id': circuit.id }) }}">détails</a>
+
+                        </li>
+                    </ul>
+                </td>
+                {% if is_granted('ROLE_USER') %}
+
+                    <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('circuit_modify', { 'id': circuit.id }) }}">Modifier</a>
+                        </li>
+                    </ul>
+                </td>
+
+                {% endif %}
+
+
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+    {% if is_granted('ROLE_USER') %}
+        <br/><br/>
+
+        <a href="{{ path('circuit_add') }}">Ajouter un voyage</a>
+
+
+
+
+    {% endif %}
+    
+{% endblock %} {# main #}

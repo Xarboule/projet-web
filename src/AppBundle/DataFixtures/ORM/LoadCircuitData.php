@@ -12,44 +12,44 @@ class LoadCircuitData extends AbstractFixture implements OrderedFixtureInterface
 	public function load(ObjectManager $manager)
 	{		
 		$circuit = new Circuit();
-		$circuit->setDescription('Andalousie');
-		$circuit->setPaysDepart('Espagne');
-		$circuit->setVilleDepart('Grenade');
-		$circuit->setVilleArrivee('Séville');
+		$circuit->setDescription('Star Wars');
+		$circuit->setPaysDepart('Tatooine');
+		$circuit->setVilleDepart('Chez Oncle Owen');
+		$circuit->setVilleArrivee('Etoile de la mort');
 		//$circuit->setDureeCircuit(4);
 		$manager->persist($circuit);
 		
-		$this->addReference('andalousie-circuit', $circuit);
+		$this->addReference('starwars-circuit', $circuit);
 		
 		$circuit = new Circuit();
-		$circuit->setDescription('Vietnam');
-		$circuit->setPaysDepart('VietNam');
-		$circuit->setVilleDepart('Hanoi');
-		$circuit->setVilleArrivee('Hô Chi Minh');
+		$circuit->setDescription("Destruction de l'Anneau");
+		$circuit->setPaysDepart('Comté');
+		$circuit->setVilleDepart('Cul-de-sac');
+		$circuit->setVilleArrivee('Mordor');
 		//$circuit->setDureeCircuit(4);
 		$manager->persist($circuit);
 		
-		$this->addReference('vietnam-circuit', $circuit);
+		$this->addReference('anneau-circuit', $circuit);
 		
 		$circuit = new Circuit();
-		$circuit->setDescription('Ile de France');
-		$circuit->setPaysDepart('France');
-		$circuit->setVilleDepart('Paris');
-		$circuit->setVilleArrivee('Paris');
+		$circuit->setDescription('Retour vers le futur');
+		$circuit->setPaysDepart('USA');
+		$circuit->setVilleDepart('Hill Valley');
+		$circuit->setVilleArrivee('Hill Valley');
 		//$circuit->setDureeCircuit(2);
 		$manager->persist($circuit);
 		
-		$this->addReference('idf-circuit', $circuit);
+		$this->addReference('retourfutur-circuit', $circuit);
 		
 		$circuit = new Circuit();
-		$circuit->setDescription('Italie');
-		$circuit->setPaysDepart('Italie');
-		$circuit->setVilleDepart('Milan');
-		$circuit->setVilleArrivee('Rome');
+		$circuit->setDescription('Jurassic Park');
+		$circuit->setPaysDepart('Costa Rica');
+		$circuit->setVilleDepart('Isla Nublar');
+		$circuit->setVilleArrivee('Isla Nublar');
 		//$circuit->setDureeCircuit(4);
 		$manager->persist($circuit);
 		
-		$this->addReference('italie-circuit', $circuit);
+		$this->addReference('jurassic-circuit', $circuit);
 		
 		$manager->flush();
 	}

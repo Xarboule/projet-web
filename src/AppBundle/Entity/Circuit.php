@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Classe "Circuit" du Modèle 
+ * Classe "Circuit" du Modèle
  *
  * Entité du Modèle qui gère les circuits pouvant être (ou ayant pu être) organisés par l'agence de voyage
  *
@@ -67,9 +67,9 @@ class Circuit
 
     /**
      * Programmations de ce circuit
-     * 
+     *
      * On définit l'association avec un orphanRemoval pour faciliter la suppression des programmations
-     * 
+     *
      * @ORM\OneToMany(targetEntity="ProgrammationCircuit", mappedBy="circuit", orphanRemoval=true)
      * (Doctrine INVERSE SIDE)
      */
@@ -79,9 +79,9 @@ class Circuit
      * Étapes de ce circuit
      *
      * On définit l'association avec un orphanRemoval pour faciliter la suppression des étapes
-     *  
-     * @ORM\OneToMany(targetEntity="Etape", 
-     * 					mappedBy="circuit", orphanRemoval=true)
+     *
+     * @ORM\OneToMany(targetEntity="Etape",
+     * 					mappedBy="circuit", orphanRemoval=true, cascade={"persist"})
      * (Doctrine INVERSE SIDE)
      */
     protected $etapes;
@@ -215,7 +215,7 @@ class Circuit
     {
         return $this->dureeCircuit;
     }
-    
+
     /**
      * Constructor
      */
@@ -235,9 +235,9 @@ class Circuit
     public function addProgrammation(\AppBundle\Entity\ProgrammationCircuit $programmation)
     {
         $this->programmations[] = $programmation;
-        
+
         $programmation->setCircuit($this);
-        
+
         return $this;
     }
 
@@ -245,7 +245,7 @@ class Circuit
      * Remove programmation
      *
      * @param \AppBundle\Entity\ProgrammationCircuit $programmation
-     * 
+     *
      * @return Circuit
      */
     public function removeProgrammation(\AppBundle\Entity\ProgrammationCircuit $programmation)
@@ -253,9 +253,9 @@ class Circuit
     	if($programmation->getCircuit() != $this) {
     		return null;
     	}
-    	
+
     	$this->programmations->removeElement($programmation);
-        
+
         return $this;
     }
 
@@ -280,16 +280,16 @@ class Circuit
     public function addEtape(\AppBundle\Entity\Etape $etape)
     {
     	$dureeCircuit=$this->getDureeCircuit();
-    	
+
     	$dureeEtape = $etape->getNombreJours();
-    	
+
         $this->etapes[] = $etape;
 
         $etape->setCircuit($this);
-        
+
         $dureeCircuit += $dureeEtape;
         $this->setDureeCircuit($dureeCircuit);
-        
+
         return $this;
     }
 
@@ -297,7 +297,7 @@ class Circuit
      * Remove etape
      *
      * @param \AppBundle\Entity\Etape $etape
-     * 
+     *
      * @return Circuit
      *
      */
@@ -309,14 +309,14 @@ class Circuit
         $dureeCircuit = $this->getDureeCircuit();
 
         $dureeEtape = $etape->getNombreJours();
-    	
+
        	$this->etapes->removeElement($etape);
        	// pas nécessaire car orphanRemoval
        	//$etape->setCircuit(null);
-       	
+
         $dureeCircuit -= $dureeEtape;
         $this->setDureeCircuit($dureeCircuit);
-        
+
         return $this;
     }
 

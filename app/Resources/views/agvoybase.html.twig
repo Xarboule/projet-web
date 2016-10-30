@@ -27,7 +27,7 @@
                                         <a href="{{ path('circuit_index') }}">Voyages</a>
                                     </li>
                                     <li>
-                                    {% if is_granted('ROLE_ADMIN') %}
+                                    {% if is_granted('ROLE_USER') %}
                                         <a href="{{ path('fos_user_security_logout') }}">
                                             Logout
                                         </a>
@@ -55,7 +55,7 @@
         
 {% block sidebar %}
 	<h4>Tux Voyages</h4>
-	<p>Avec Tux voyages, faites un "mv ~/tousMesProblemes /dev/null", et voyagez avec l'esprit tranquille !</p>
-    <img src="http://www.gifsanimes.fr/images/t/tux/tux-gifs-animes-7900876.gif" style="width: 50%; height: 50%" >
+	<p>Avec Tux voyages, faites un "mv ~/tousMesProblemes /dev/null", et voyagez avec l'esprit libre !</p>
+    <img src="http://www.gifsanimes.fr/images/t/tux/tux-gifs-animes-7900876.gif" style="width: 50%; height: 50%; vertical-align: middle;" >
 
 {% endblock %}

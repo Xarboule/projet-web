@@ -15,41 +15,41 @@ class LoadProgrammationCircuitData extends AbstractFixture implements OrderedFix
 		$progcircuit->setDateDepart(new \DateTime('2016-07-10'));
 		$progcircuit->setNombrePersonnes(10);
 		$progcircuit->setPrix(850);
-		$progcircuit->setCircuit($this->getReference('andalousie-circuit'));
+		$progcircuit->setCircuit($this->getReference('starwars-circuit'));
 		
 		$manager->persist($progcircuit);
 
-		$this->addReference('programmation-andalousie-1', $progcircuit);
+		$this->addReference('programmation-starwars-1', $progcircuit);
 		
 		$progcircuit = new ProgrammationCircuit();
 		$progcircuit->setDateDepart(new \DateTime('2016-08-10'));
 		$progcircuit->setNombrePersonnes(10);
 		$progcircuit->setPrix(1500);
-		$progcircuit->setCircuit($this->getReference('vietnam-circuit'));
+		$progcircuit->setCircuit($this->getReference('anneau-circuit'));
 		
 		$manager->persist($progcircuit);
 		
-		$this->addReference('programmation-vietnam-1', $progcircuit);
+		$this->addReference('programmation-anneau-1', $progcircuit);
 		
 		$progcircuit = new ProgrammationCircuit();
 		$progcircuit->setDateDepart(new \DateTime('2016-05-15'));
 		$progcircuit->setNombrePersonnes(12);
 		$progcircuit->setPrix(120);
-		$progcircuit->setCircuit($this->getReference('idf-circuit'));
+		$progcircuit->setCircuit($this->getReference('retourfutur-circuit'));
 		
 		$manager->persist($progcircuit);
 		
-		$this->addReference('programmation-idf-1', $progcircuit);
+		$this->addReference('programmation-retourfutur-1', $progcircuit);
 		
 		$progcircuit = new ProgrammationCircuit();
 		$progcircuit->setDateDepart(new \DateTime('2016-10-23'));
 		$progcircuit->setNombrePersonnes(15);
 		$progcircuit->setPrix(1100);
-		$progcircuit->setCircuit($this->getReference('italie-circuit'));
+		$progcircuit->setCircuit($this->getReference('jurassic-circuit'));
 		
 		$manager->persist($progcircuit);
 		
-		$this->addReference('programmation-italie-1', $progcircuit);
+		$this->addReference('programmation-jurassic-1', $progcircuit);
 		
 		$manager->flush();
 	}

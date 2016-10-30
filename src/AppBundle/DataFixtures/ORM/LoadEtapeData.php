@@ -11,11 +11,11 @@ class LoadEtapeData extends AbstractFixture implements OrderedFixtureInterface
 {
 	public function load(ObjectManager $manager)
 	{
-		$circuit=$this->getReference('andalousie-circuit');
+		$circuit=$this->getReference('starwars-circuit');
 		
 		$etape = new Etape();
 		$etape->setNumeroEtape(1);
-		$etape->setVilleEtape("Grenade");
+		$etape->setVilleEtape("Alderaan");
 		$etape->setNombreJours(1);
 		$circuit->addEtape($etape);
 		
@@ -23,23 +23,23 @@ class LoadEtapeData extends AbstractFixture implements OrderedFixtureInterface
 		
 		$etape = new Etape();
 		$etape->setNumeroEtape(2);
-		$etape->setVilleEtape("Cordoue");
+		$etape->setVilleEtape("Cantina");
 		$etape->setNombreJours(2);
 		$circuit->addEtape($etape);
 		$manager->persist($etape);
 		
 		$etape = new Etape();
 		$etape->setNumeroEtape(3);
-		$etape->setVilleEtape("Séville");
+		$etape->setVilleEtape("Faucon Millenium");
 		$etape->setNombreJours(1);
 		$circuit->addEtape($etape);
 		$manager->persist($etape);
 
-		$circuit=$this->getReference('vietnam-circuit');
+		$circuit=$this->getReference('anneau-circuit');
 		
 		$etape = new Etape();
 		$etape->setNumeroEtape(1);
-		$etape->setVilleEtape("Hanoï");
+		$etape->setVilleEtape("Auberge du Poney fringuant");
 		$etape->setNombreJours(1);
 		$circuit->addEtape($etape);
 		$manager->persist($etape);
@@ -47,67 +47,67 @@ class LoadEtapeData extends AbstractFixture implements OrderedFixtureInterface
 		
 		$etape = new Etape();
 		$etape->setNumeroEtape(3);
-		$etape->setVilleEtape("Hôi An");
+		$etape->setVilleEtape("Fendeval");
 		$etape->setNombreJours(1);
 		$circuit->addEtape($etape);
 		$manager->persist($etape);
 		
 		$etape = new Etape();
 		$etape->setNumeroEtape(4);
-		$etape->setVilleEtape("Hô Chi Minh");
+		$etape->setVilleEtape("Mines de la Moria");
 		$etape->setNombreJours(1);
 		$circuit->addEtape($etape);
 		$manager->persist($etape);
 		
 		$etape = new Etape();
 		$etape->setNumeroEtape(2);
-		$etape->setVilleEtape("Dà Nang");
+		$etape->setVilleEtape("Montagne du Destin");
 		$etape->setNombreJours(1);
 		$circuit->addEtape($etape);
 		$manager->persist($etape);
 		
-		$circuit=$this->getReference('idf-circuit');
+		$circuit=$this->getReference('retourfutur-circuit');
 		
 		$etape = new Etape();
 		$etape->setNumeroEtape(1);
-		$etape->setVilleEtape("Versailles");
+		$etape->setVilleEtape("Passé");
 		$etape->setNombreJours(1);
 		$circuit->addEtape($etape);
 		$manager->persist($etape);
 		
 		$etape = new Etape();
 		$etape->setNumeroEtape(2);
-		$etape->setVilleEtape("Paris");
+		$etape->setVilleEtape("Futur");
 		$etape->setNombreJours(1);
 		$circuit->addEtape($etape);
 		$manager->persist($etape);
 		
-		$circuit=$this->getReference('italie-circuit');
+		$circuit=$this->getReference('jurassic-circuit');
 		
 		$etape = new Etape();
 		$etape->setNumeroEtape(1);
-		$etape->setVilleEtape("Florence");
+		$etape->setVilleEtape("Diplodocus");
 		$etape->setNombreJours(1);
 		$circuit->addEtape($etape);
 		$manager->persist($etape);
 		
 		$etape = new Etape();
 		$etape->setNumeroEtape(2);
-		$etape->setVilleEtape("Sienne");
+		$etape->setVilleEtape("Steganosaure");
 		$etape->setNombreJours(1);
 		$circuit->addEtape($etape);
 		$manager->persist($etape);
 		
 		$etape = new Etape();
 		$etape->setNumeroEtape(3);
-		$etape->setVilleEtape("Pise");
+		$etape->setVilleEtape("Velociraptor");
 		$etape->setNombreJours(1);
 		$circuit->addEtape($etape);
 		$manager->persist($etape);
 		
 		$etape = new Etape();
 		$etape->setNumeroEtape(4);
-		$etape->setVilleEtape("Rome");
+		$etape->setVilleEtape("T-Rex");
 		$etape->setNombreJours(1);
 		$circuit->addEtape($etape);
 		$manager->persist($etape);
